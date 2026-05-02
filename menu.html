@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Sabores Exclusivos</title>
+    <link rel="stylesheet" href="menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">FOOD<span>MENU</span></div>
+        <div class="social-links">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">IG</a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">FB</a>
+        </div>
+    </header>
+
+    <section class="hero" style="background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(200, 16, 46, 0.7)), url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1920&q=80');">
+        <div class="hero-content">
+            <h1>SABORES EXCLUSIVOS</h1>
+            <p>Descubre la verdadera esencia de nuestra cocina. Preparado con los ingredientes más frescos para ti.</p>
+        </div>
+    </section>
+
+    <section class="info-bar">
+        <div class="info-item">
+            <strong>📍 Ubicación</strong>
+            <span>Trinidad, Beni</span>
+        </div>
+        <div class="info-item">
+            <strong>🕒 Horarios</strong>
+            <span>Lun - Dom: 11:00 AM - 10:00 PM</span>
+        </div>
+        <div class="info-item">
+            <strong>🛵 Envíos</strong>
+            <span>Delivery disponible</span>
+        </div>
+        <div class="info-item">
+            <strong>💳 Pagos</strong>
+            <span>Efectivo, QR y Tarjetas</span>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="especiales">Especiales</button>
+            <button class="filter-btn" data-filter="guarniciones">Guarniciones</button>
+            <button class="filter-btn" data-filter="bebidas">Bebidas</button>
+        </div>
+
+        <div class="menu-grid">
+            <!-- Producto 1 -->
+            <article class="menu-card" data-categoria="especiales">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Estofado Especial">
+                <div class="card-content">
+                    <h3>Estofado Especial de la Casa</h3>
+                    <p>Deliciosa carne de res cocinada a fuego lento con zanahorias y especias seleccionadas.</p>
+                    <span class="price">Bs. 45.00</span>
+                    <button class="order-btn" onclick="abrirModal('Estofado Especial de la Casa', 45.00)">Ordenar</button>
+                </div>
+            </article>
+
+            <!-- Producto 2 -->
+            <article class="menu-card" data-categoria="especiales">
+                <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=500&q=80" alt="Picante de Carne">
+                <div class="card-content">
+                    <h3>Picante de Carne</h3>
+                    <p>Tradicional corte de res en salsa picante con base de ají, acompañado de arroz.</p>
+                    <span class="price">Bs. 40.00</span>
+                    <button class="order-btn" onclick="abrirModal('Picante de Carne', 40.00)">Ordenar</button>
+                </div>
+            </article>
+
+            <!-- Producto 3 -->
+            <article class="menu-card" data-categoria="especiales">
+                <img src="https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?auto=format&fit=crop&w=500&q=80" alt="Pollo al Horno">
+                <div class="card-content">
+                    <h3>Pollo al Horno con Verduras</h3>
+                    <p>Medio pollo jugoso horneado con hierbas provenzales y guarnición de verduras.</p>
+                    <span class="price">Bs. 35.00</span>
+                    <button class="order-btn" onclick="abrirModal('Pollo al Horno con Verduras', 35.00)">Ordenar</button>
+                </div>
+            </article>
+
+            <!-- Producto 4 -->
+            <article class="menu-card" data-categoria="especiales">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=500&q=80" alt="Majadito de Pato">
+                <div class="card-content">
+                    <h3>Majadito de Pato</h3>
+                    <p>Clásico plato oriental, arroz tostado con trozos de pato, plátano frito y huevo.</p>
+                    <span class="price">Bs. 30.00</span>
+                    <button class="order-btn" onclick="abrirModal('Majadito de Pato', 30.00)">Ordenar</button>
+                </div>
+            </article>
+
+            <!-- Producto 5 -->
+            <article class="menu-card" data-categoria="guarniciones">
+                <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=500&q=80" alt="Arroz con Queso">
+                <div class="card-content">
+                    <h3>Porción de Arroz con Queso</h3>
+                    <p>Arroz cremoso preparado con abundante queso criollo derretido.</p>
+                    <span class="price">Bs. 15.00</span>
+                    <button class="order-btn" onclick="abrirModal('Porción de Arroz con Queso', 15.00)">Ordenar</button>
+                </div>
+            </article>
+
+            <!-- Producto 6 -->
+            <article class="menu-card" data-categoria="guarniciones">
+                <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=500&q=80" alt="Yuca Frita">
+                <div class="card-content">
+                    <h3>Yuca Frita</h3>
+                    <p>Crujientes bastones de yuca frita, el acompañamiento perfecto para tu plato.</p>
+                    <span class="price">Bs. 10.00</span>
+                    <button class="order-btn" onclick="abrirModal('Yuca Frita', 10.00)">Ordenar</button>
+                </div>
+            </article>
+
+            <!-- Producto 7 -->
+            <article class="menu-card" data-categoria="bebidas">
+                <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=500&q=80" alt="Jugo Natural">
+                <div class="card-content">
+                    <h3>Refresco de Copoazú</h3>
+                    <p>Bebida refrescante y natural de pulpa de copoazú amazónico.</p>
+                    <span class="price">Bs. 8.00</span>
+                    <button class="order-btn" onclick="abrirModal('Refresco de Copoazú', 8.00)">Ordenar</button>
+                </div>
+            </article>
+
+            <!-- Producto 8 -->
+            <article class="menu-card" data-categoria="bebidas">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=500&q=80" alt="Chicha">
+                <div class="card-content">
+                    <h3>Chicha Camba</h3>
+                    <p>Bebida tradicional sin alcohol a base de maíz tostado y especias.</p>
+                    <span class="price">Bs. 8.00</span>
+                    <button class="order-btn" onclick="abrirModal('Chicha Camba', 8.00)">Ordenar</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="contact-info">
+            <h3>Contáctanos</h3>
+            <p>Teléfono: +591 70000000</p>
+            <p>Dirección: Calle Central, Centro, Trinidad, Beni</p>
+            <p>Email: pedidos@saboresexclusivos.com</p>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61847.11475762696!2d-64.9392231!3d-14.8347225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93dd16bdc1d3f23b%3A0xc3af87cdd4e1f706!2sTrinidad%2C%20Bolivia!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer>
+
+    <!-- Modal de Pedidos -->
+    <div id="order-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" onclick="cerrarModal()">&times;</button>
+            <h2 id="modal-product-name">Nombre del Producto</h2>
+            <p class="modal-base-price">Precio: <span id="modal-price">0.00</span> Bs.</p>
+            
+            <div class="extras-group">
+                <h3>Agrega Extras</h3>
+                <label>
+                    <input type="checkbox" class="extra-checkbox" value="5.00" onchange="calcularTotal()">
+                    Porción extra de Llajua (+ Bs. 5.00)
+                </label>
+                <label>
+                    <input type="checkbox" class="extra-checkbox" value="10.00" onchange="calcularTotal()">
+                    Porción extra de Arroz (+ Bs. 10.00)
+                </label>
+                <label>
+                    <input type="checkbox" class="extra-checkbox" value="15.00" onchange="calcularTotal()">
+                    Agrandar Proteína (+ Bs. 15.00)
+                </label>
+            </div>
+
+            <div class="modal-instructions">
+                <h3>Instrucciones Especiales</h3>
+                <textarea id="modal-notes" rows="3" placeholder="Ej: Sin cebolla, extra picante..."></textarea>
+            </div>
+
+            <div class="modal-total">
+                <h3>Total: <span id="modal-total-price">0.00</span> Bs.</h3>
+            </div>
+            
+            <button class="confirm-order-btn" onclick="generarWhatsApp()">Confirmar por WhatsApp</button>
+        </div>
+    </div>
+
+    <script src="menu.js"></script>
+</body>
+</html>
